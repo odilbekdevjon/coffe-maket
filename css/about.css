@@ -1,0 +1,339 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fraunces', 'Barlow', sans-serif;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1420px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.header {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__list {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.header__item__link {
+    text-decoration: none;
+    color: black;
+    font-family: Barlow;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 15px;
+    text-align: left;
+    opacity: 0.5;
+}
+
+.header__item__link:active {
+    color: #333D4B;
+    opacity: 100;
+}
+
+.header__menu__list,
+.header__menu {
+    display: none;
+}
+
+@media (max-width:500px) {
+
+    .menu_wrapp {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header__list {
+        display: none;
+    }
+
+    .header__menu {
+        display: block;
+    }
+
+    .header__menu__list {
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding-top: 100px;
+        background-color: white;
+        list-style: none;
+        border-radius: 8px;
+    }
+
+    .header__menu__link {
+        text-decoration: none;
+        color: #333D4B;
+        margin-bottom: 30px;
+        font-size: 24px;
+        font-weight: 900;
+        line-height: 32px;
+        text-align: center;
+    }
+
+    .header__menu__item {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .menu__close {
+        position: absolute;
+        right: 0;
+        top: 10px;
+        margin-right: 20px;
+    }
+
+}
+
+
+/* hero */
+
+.hero {
+    width: 100%;
+    height: 450px;
+    background-image: url('../about-images/hero-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 7px;
+    color: white;
+    margin-top: 20px;
+}
+
+.hero__wrapper {
+    padding-top: 80px;
+    padding-left: 70px;
+}
+
+.hero__title {
+    font-family: Fraunces;
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 48px;
+    letter-spacing: 0px;
+}
+
+.hero__text {
+    max-width: 445px;
+    font-family: Barlow;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 26px;
+    text-align: left;
+}
+
+@media (max-width:750px) {
+    .hero {
+        width: 100%;
+        height: 400px;
+        background-image: url('../about-images/hero-bg-tablet.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+@media (max-width:450px) {
+    .hero {
+        width: 100%;
+        height: 400px;
+        background-image: url('../about-images/hero-bg-mobile.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .hero__title {
+        font-family: Fraunces;
+        font-weight: 900;
+        font-size: 38px;
+        line-height: 28px;
+        letter-spacing: 0px;
+        text-align: center;
+    }
+
+    .hero__text {
+        max-width: 300px;
+        font-family: Barlow;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 25px;
+        letter-spacing: 0px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .hero__wrapper {
+        padding: 0;
+        padding-top: 100px;
+    }
+
+}
+
+/* main */
+
+.main__wrapper {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.main__wrapper__left__title {
+    font-family: Fraunces 9pt;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: 0px;
+}
+
+.main__wrapper__left__text {
+    max-width: 540px;
+    font-family: Barlow;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0px;
+}
+
+@media (max-width:900px) {
+    .main__wrapper {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .main__wrapper__left__image {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .main__wrapper__right {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+}
+
+@media (max-width:500px) {
+    .main__wrapper__left__image {
+        max-width: 350px;
+    }
+
+    .main__wrapper__left__title {
+        font-family: Fraunces;
+        font-weight: 900;
+        font-size: 32px;
+        line-height: 48px;
+        letter-spacing: 0px;
+        text-align: center;
+    }
+
+    .main__wrapper__left__text {
+        max-width: 350px;
+        font-family: Barlow;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 25px;
+        letter-spacing: 0px;
+        text-align: center;
+    }
+
+}
+
+@media (max-width:380px) {
+    .main__wrapper__left__image {
+        width: 300px;
+    }
+}
+
+/* quality */
+
+.quality {
+    background-color: #333D4B;
+    border-radius: 8px;
+    padding: 30px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+    color: white;
+}
+
+.quality__left__title {
+    font-family: Fraunces 9pt;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: 0px;
+}
+
+.quality__left__text {
+    max-width: 540px;
+    font-family: Barlow;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0px;
+}
+
+.quality__right__image {
+    margin-top: -80px;
+}
+
+@media (max-width:800px) {
+    .quality {
+        margin-top: 200px;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .quality__right__image {
+        display: block;
+        margin-top: -200px;
+    }
+
+}
+
+@media (max-width:500px) {
+
+    .quality__right__image {
+        max-width: 330px;
+    }
+
+
+    .quality__left__title {
+        font-family: Fraunces 9pt;
+        font-weight: 900;
+        font-size: 28px;
+        line-height: 28px;
+        letter-spacing: 0px;
+        text-align: center;
+    }
+
+    .quality__left__text {
+        font-family: Barlow;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 25px;
+        letter-spacing: 0px;
+        text-align: center;
+    }
+
+}
